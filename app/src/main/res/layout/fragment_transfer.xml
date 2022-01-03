@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    tools:context=".ui.fragment.TransferFragment">
+
+    <TextView
+        android:id="@+id/txtback"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:background="@drawable/ic_back_arrow"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/border"
+        android:gravity="center"
+        android:text="Transfer"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/txtback" />
+
+    <Spinner
+        android:id="@+id/spnPayee"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/newborder"
+        android:entries="@array/payeename"
+        android:paddingStart="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitle" />
+
+    <EditText
+        android:id="@+id/edtTransferAmount"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/newborder"
+        android:hint="Enter Amount"
+        android:inputType="number"
+        android:maxLength="10"
+        android:paddingStart="20dp"
+        android:singleLine="true"
+        app:layout_constraintTop_toBottomOf="@+id/spnPayee" />
+
+
+    <EditText
+        android:id="@+id/edtTransferDesc"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/newborder"
+        android:hint="Description"
+        android:inputType="textMultiLine"
+        android:paddingStart="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/edtTransferAmount" />
+
+    <Button
+        android:id="@+id/btnTransferNow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/border"
+        android:text="Transfer Now"
+        app:layout_constraintTop_toBottomOf="@+id/edtTransferDesc" />
+
+    <include
+        android:id="@+id/llProgressBar"
+        layout="@layout/progressbar_layout"
+        android:visibility="gone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

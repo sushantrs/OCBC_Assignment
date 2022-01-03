@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">OCBC Assignment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="error_msg">Please enter valid username</string>
+    <string name="error_msg_passwd">Please enter valid password</string>
+    <string name="passwd_not_match">Confirm pasword does not match</string>
+    <string name="login_failed">Login Failed Please Try Again</string>
+    <string name="login_success">Login Success</string>
+    <string name="regsiter_success">Registered Successfully</string>
+    <string name="acc_no">Account No :</string>
+    <string name="balance">Balance :</string>
+    <string name="acc_holder">Account Holder :</string>
+    <string name="logouttitle">Logout</string>
+    <string name="dialogMessage">Do you want to Logout?</string>
+    <string name="logout">Log Out Successfully</string>
+    <string name="transefer_failed">Transfer Failed</string>
+    <string-array name="payeename">
+        <item>Alvis</item>
+        <item>Elsie</item>
+        <item>Emmie</item>
+        <item>Mohammed</item>
+        <item>Andy</item>
+    </string-array>
+
+</resources>

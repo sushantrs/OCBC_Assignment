@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.HomeFragment">
+
+    <TextView
+        android:id="@+id/txtLogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:gravity="end"
+        android:text="Logout"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/border"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/txtLogout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+       <TextView
+           app:layout_constraintTop_toTopOf="parent"
+           android:text="AccountNo :"
+           android:id="@+id/txtAccNo"
+           android:textSize="20sp"
+           android:textStyle="bold"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_marginLeft="20dp"
+           app:layout_constraintLeft_toRightOf="@+id/txtAccNo"
+           android:text=" "
+           android:id="@+id/txtAccNoValue"
+           android:textSize="20sp"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"/>
+
+        <TextView
+            app:layout_constraintTop_toBottomOf="@+id/txtAccNo"
+           android:text="Balance :"
+           android:id="@+id/txtBalance"
+           android:textSize="20sp"
+           android:textStyle="bold"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"/>
+
+        <TextView
+            app:layout_constraintTop_toBottomOf="@+id/txtAccNoValue"
+            android:layout_marginLeft="20dp"
+           app:layout_constraintLeft_toRightOf="@+id/txtBalance"
+           android:text="1000"
+           android:id="@+id/txtBalanceValue"
+           android:textSize="20sp"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"/>
+
+        <TextView
+            app:layout_constraintTop_toBottomOf="@+id/txtBalance"
+           android:text="Account Holder :"
+           android:id="@+id/txtAccountHolder"
+           android:textSize="20sp"
+           android:textStyle="bold"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"/>
+
+        <TextView
+            app:layout_constraintTop_toBottomOf="@+id/txtBalanceValue"
+            android:layout_marginLeft="20dp"
+           app:layout_constraintLeft_toRightOf="@+id/txtAccountHolder"
+           android:text=" "
+           android:id="@+id/txtAccountHolderValue"
+           android:textSize="20sp"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:visibility="gone"
+        android:id="@+id/swipeLayout"
+        android:layout_marginTop="80dp"
+        app:layout_constraintTop_toBottomOf="@+id/txtLogout"
+        android:layout_width="match_parent"
+        android:layout_height="500dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listTrans"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"/>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <TextView
+        android:gravity="center"
+        android:text="No Data Available"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtLogout"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:id="@+id/txtNoData"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"/>
+
+    <Button
+        android:id="@+id/btnTransfer"
+        android:text="Make Transfer"
+        android:background="@drawable/border"
+        app:layout_constraintTop_toBottomOf="@+id/txtNoData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

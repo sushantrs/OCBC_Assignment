@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginRight="30dp"
+    android:layout_marginLeft="30dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragment.LoginFragment">
+
+
+    <TextView
+        android:background="@drawable/ic_back_arrow"
+        android:id="@+id/txtback"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="50dp"
+        android:layout_height="35dp"/>
+
+    <TextView
+        app:layout_constraintBottom_toTopOf="@+id/userNameIP"
+        android:gravity="center"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:text="@string/register"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:background="@drawable/newborder"
+        android:layout_marginBottom="200dp"
+        android:id="@+id/userNameIP"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:paddingStart="5dp"
+            android:id="@+id/edtUsername"
+            android:maxLength="15"
+            android:inputType="text"
+            android:singleLine="true"
+            android:hint="Username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:background="@drawable/newborder"
+        android:layout_marginTop="40dp"
+        app:passwordToggleEnabled="true"
+        app:layout_constraintTop_toBottomOf="@+id/userNameIP"
+        android:id="@+id/PasswordIP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:paddingStart="5dp"
+            android:id="@+id/edtPassowrd"
+            android:maxLength="12"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:hint="Password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+     <com.google.android.material.textfield.TextInputLayout
+        android:background="@drawable/newborder"
+         android:layout_marginTop="40dp"
+        app:passwordToggleEnabled="true"
+        app:layout_constraintTop_toBottomOf="@+id/PasswordIP"
+        android:id="@+id/confirmPasswordIP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:paddingStart="5dp"
+            android:id="@+id/edtConfirmPassowrd"
+            android:maxLength="12"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:hint="Confirm Pasword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:background="@drawable/border"
+        android:layout_marginTop="40dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/confirmPasswordIP"
+        android:text="@string/register"
+        android:id="@+id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
